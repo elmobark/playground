@@ -30,7 +30,7 @@ public class TodoMainActivity extends AppCompatActivity {
                 in.setAction(Intent.ACTION_VIEW);
                 in.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 ShortcutInfo shortcutInfo = new ShortcutInfo.Builder(this,"newTashShortCutId")
-                        .setRank(0).setShortLabel("smallText").setIcon(Icon.createWithResource(this,R.mipmap.ic_launcher))
+                        .setRank(0).setShortLabel("smallText").setIcon(Icon.createWithResource(this,R.drawable.ic_launcher_foreground))
                         .setLongLabel("LongText")
                         .setIntent(in)
                         .build();

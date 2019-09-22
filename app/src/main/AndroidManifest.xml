@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.playground">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher_foreground"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".TodoMainActivity">
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activitys.AnimationLab.flash_fix.xml_activity.FlashFixXmlActivityB"></activity>
+        <activity android:name=".activitys.AnimationLab.flash_fix.xml_activity.FlashFixXmlActivityA" />
+        <activity android:name=".activitys.AnimationLab.flash_fix.programmatic_activity.FlashFixProgrammaticActivityB" />
+        <activity android:name=".activitys.AnimationLab.flash_fix.programmatic_activity.FlashFixProgrammaticActivityA" />
+        <activity android:name=".activitys.AnimationLab.recycler_view.recycler_view_to_viewpager.RecyclerViewToViewPagerActivity" />
+        <activity android:name=".activitys.AnimationLab.recycler_view.recycler_view_to_fragment.RecyclerViewToFragmentActivity" />
+        <activity android:name=".activitys.AnimationLab.recycler_view.recycler_view_to_activity.RecyclerViewActivity" />
+        <activity android:name=".activitys.AnimationLab.recycler_view.recycler_view_to_activity.AnimalDetailActivity" />
+        <activity android:name=".activitys.AnimationLab.simple_fragment_to_fragment.FragmentToFragmentActivity" />
+        <activity android:name=".activitys.AnimationLab.simple_activity_to_activity.SimpleActivityB" />
+        <activity android:name=".activitys.AnimationLab.simple_activity_to_activity.SimpleActivityA" />
+        <activity android:name=".activitys.AnimationLab.AnimatHomeActivity" />
+        <activity
+            android:name=".activitys.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activitys.CameraAct" />
+        <activity android:name=".activitys.Nightmode" />
+        <activity android:name=".activitys.AnimLab" />
+        <activity android:name=".activitys.DrawActivity" />
+        <activity android:name=".activitys.SecLab" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activitys.LabActivity" />
+        <activity android:name=".activitys.Rticket" />
+        <activity android:name=".activitys.RdateSelect" />
+        <activity android:name=".activitys.Rcompanyes" />
+        <activity android:name=".activitys.Rmap" />
+        <activity android:name=".activitys.RbusList" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activitys.Rlogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".NewTaskActivity"/>
-        <activity android:name=".CompletedTasksActivity"/>
-        <activity android:name=".InProgressTasksActivity"/>
-
+        <activity android:name=".TodoMainActivity" />
+        <activity android:name=".NewTaskActivity" />
+        <activity android:name=".CompletedTasksActivity" />
+        <activity android:name=".InProgressTasksActivity" />
     </application>
 
 </manifest>

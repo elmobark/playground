@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/Lab_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+
+        android:background="@color/backgroundColor"
+        android:elevation="10dp"
+        app:elevation="10dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/Lab_Collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:contentScrim="@color/colorList5"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+            app:toolbarId="@+id/Lab_toolbar">
+
+            <ImageView
+                android:id="@+id/Lab_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground"
+                app:layout_collapseMode="parallax" />
+
+            <com.example.playground.BlurBook.BlurView
+                android:id="@+id/Lab_blur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/Lab_blurframe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            </FrameLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/Lab_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="10dp"
+                app:title="aaa" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:id="@+id/Lab_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/Lab_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Lab_Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.example.playground.CircleImageView
+        android:id="@+id/Lab_cirimg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:src="@drawable/ic_local_see_black_24dp"
+        app:civ_border_color="#fff"
+        app:civ_border_width="3dp"
+        app:layout_anchor="@id/Lab_appbar"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_collapseMode="pin" />
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+    <include layout="@layout/included_bottom_app_bar"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

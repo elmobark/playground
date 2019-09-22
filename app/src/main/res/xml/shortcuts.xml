@@ -7,7 +7,7 @@
 
         android:enabled="true"
 
-        android:icon="@drawable/ic_new_task"
+        android:icon="@drawable/sky"
 
         android:shortcutShortLabel="@string/new_task_shortcut_short_label"
 
@@ -25,7 +25,7 @@
 
         android:enabled="true"
 
-        android:icon="@drawable/ic_completed"
+        android:icon="@drawable/sky"
 
         android:shortcutShortLabel="@string/completed_tasks_shortcut_short_label"
 
@@ -44,7 +44,7 @@
 
         android:enabled="true"
 
-        android:icon="@drawable/ic_in_progress"
+        android:icon="@drawable/sky"
 
         android:shortcutShortLabel="@string/inprogress_tasks_shortcut_short_label"
 

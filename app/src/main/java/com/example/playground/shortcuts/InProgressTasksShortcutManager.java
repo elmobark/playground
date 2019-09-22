@@ -45,7 +45,7 @@ public class InProgressTasksShortcutManager {
                 .setShortLabel(context.getString(R.string.inprogress_tasks_shortcut_short_label))
                 .setLongLabel(context.getString(R.string.inprogress_tasks_shortcut_long_label))
                 .setDisabledMessage(context.getString(R.string.inprogress_tasks_shortcut_disabled_message))
-                .setIcon(Icon.createWithResource(context, R.drawable.ic_in_progress))
+                .setIcon(Icon.createWithResource(context, R.drawable.ic_launcher_foreground))
                 .setIntents(new Intent[]{
                         new Intent(Intent.ACTION_MAIN, Uri.EMPTY, context, TodoMainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK),
                         inProgressIntent
